@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // 配置静态导出
-  output: 'export',
-  trailingSlash: true,
+  // 移除静态导出配置，使用默认的SSR模式
   distDir: 'out',
 
   // 配置图片优化

@@ -354,13 +354,4 @@ export default function VideoDetailPage() {
   );
 }
 
-// 生成静态参数用于静态导出
-export async function generateStaticParams() {
-  // 从mock数据中获取视频ID
-  const { mockVideos } = await import('@/data/mockData');
-
-  // 返回所有视频的ID作为静态参数
-  return mockVideos.map((video) => ({
-    id: video.id,
-  }));
-}
+// 注意：此页面为客户端组件，不支持静态参数生成

@@ -388,13 +388,4 @@ export default function CourseDetailPage() {
   );
 }
 
-// 生成静态参数用于静态导出
-export async function generateStaticParams() {
-  // 从mock数据中获取课程ID
-  const { mockCourses } = await import('@/data/mockData');
-
-  // 返回所有课程的ID作为静态参数
-  return mockCourses.map((course) => ({
-    id: course.id,
-  }));
-}
+// 注意：此页面为客户端组件，不支持静态参数生成
